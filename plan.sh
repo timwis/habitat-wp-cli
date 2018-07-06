@@ -9,6 +9,7 @@ pkg_source="https://github.com/wp-cli/wp-cli/releases/download/v${pkg_version}/w
 pkg_filename="wp-cli.phar"
 pkg_shasum="0cc7a95e68a2ef02fc423614806c29a8e76e4ac8c9b3e67d6673635d6eaea871"
 pkg_deps=(core/php)
+pkg_bin_dirs=(bin)
 
 do_unpack() {
   return 0
