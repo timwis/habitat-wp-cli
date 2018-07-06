@@ -25,9 +25,9 @@ do_check() {
 do_install() {
   install --verbose -D --mode +x "../${pkg_filename}" "${pkg_prefix}/bin/${pkg_filename}"
 
-  cat<<EOF > "${pkg_prefix}/bin/wp-cli"
+  cat<<EOF > "${pkg_prefix}/bin/wp"
 #!/bin/sh
 "$(pkg_path_for core/php)"/bin/php "${pkg_prefix}/bin/${pkg_filename}" "\$@"
 EOF
-  chmod +x "${pkg_prefix}/bin/wp-cli"
+  chmod +x "${pkg_prefix}/bin/wp"
 }
